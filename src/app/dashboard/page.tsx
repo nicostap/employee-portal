@@ -17,7 +17,7 @@ export default async function DashboardPage() {
       <Suspense fallback={<Loading />}>
         {data.map((announcement) => {
           return (
-            <ul id={announcement.id} className="my-3">
+            <ul key={announcement.id} className="my-3">
               <div>
                 <h3>{announcement.title}</h3>
                 <div>{new Date(announcement.created_at).toDateString()}</div>
